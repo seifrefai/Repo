@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+
+body {
+
+margin: 0;
+
+font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.topnav {
+
+overflow: hidden;
+
+background-color: #333;
+
+}
+
+.header_text {
+
+float: left;
+
+color: #4CAF50;
+
+text-align: center;
+
+padding: 14px 16px;
+
+text-decoration: none;
+
+}
+
+.topnav a {
+
+float: left;
+
+color: #f2f2f2;
+
+text-align: center;
+
+padding: 14px 16px;
+
+text-decoration: none;
+
+font-size: 17px;
+
+}
+
+.topnav a:hover {
+
+background-color: #ddd;
+
+color: black;
+
+}
+
+.topnav a.active {
+
+background-color: #4CAF50;
+
+color: white;
+
+}
+
+.btn {
+
+    background-color: DodgerBlue;
+
+    border: none;
+
+    color: white;
+
+    padding: 12px 30px;
+
+    cursor: pointer;
+
+    font-size: 17px;
+
+}
+
+.btn:hover {
+
+    background-color: RoyalBlue;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="topnav">
+
+                <h2 class="header_text">PHILIP GILBERT</h2>
+
+</div>
+
+<div class="topnav">
+
+<a id="link_home" class="active" href="#" onclick="navClick('home');return false;">Home</a>
+
+<a id="link_work" href="#" onclick="navClick('work');return false;">Work</a>
+
+<a id="link_contact" href="#" onclick="navClick('contact');return false;">Contact</a>
+
+</div>
+
+<div style="padding-left:16px; display:block" id="div_home">
+
+</br></br>
+
+<h4>THIS IS ME</h4>
+
+<h2 class="header_text">PHILIP GILBERT</h2>
+
+</br></br></br></br></br></br>
+
+<h4>Introduction</h4>
+
+<p>Here, I focus on a range of items and features that we use in life without giving them a second thought. such as Coca Cola. Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</h4>
+
+<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+
+<h4>Skills</h4>
+
+<p>
+
+<ul>
+
+                <li>Data Analysis</li>
+
+                <li>Copywriting</li>
+
+                <li>Foreign Languages</li>
+
+                <li>Accounting</li>
+
+                <li>Computer Languages</li>
+
+                <li>Mathematics</li>
+
+                <li>Graphic Design</li>
+
+                <li>Planning / Event Planning</li>
+
+                <li>SEO / SEM Marketing</li>
+
+                <li>Bookkeeping</li>
+
+</ul>
+
+</p>
+
+<h4>Interests</h4>
+
+<p>
+
+<ul>
+
+                <li>Music</li>
+
+                <li>Playing</li>
+
+                <li>Reading</li>
+
+                <li>Animal Care</li>
+
+</ul>
+
+</p>
+
+</div>
+
+<div style="padding-left:16px; display:none" id="div_work">
+
+</br></br>
+
+<h4>Projects</h4>
+
+<p>
+
+<ul>
+
+                <li>Project 1</li>
+
+                <li>Project 2</li>
+
+                <li>Project 3</li>
+
+                <li>Project 4</li>
+
+</ul>
+
+</p>
+
+</br></br>
+
+<button class="btn"><i class="fa fa-download"></i> Download</button>
+
+</div>
+
+<div style="padding-left:16px; display:none" id="div_contact">
+
+</br></br>
+
+<h4>Email Address : </h4>
+
+<p>YOUR_EMAIL_ADDRESS</p>
+
+<h4>Github Link : </h4>
+
+<p><a href="https://github.com/" target="_blank">https://github.com/</p>
+
+</div>
+
+</body>
+
+<script name="javascript">
+
+function navClick(nav_name) {
+
+                if(nav_name == 'home') {
+
+                                document.getElementById('div_home').style.display = 'block';
+
+                                document.getElementById('div_work').style.display = 'none';
+
+                                document.getElementById('div_contact').style.display = 'none';
+
+                                document.getElementById('link_home').className = 'active';
+
+                                document.getElementById('link_work').className = '';
+
+                                document.getElementById('link_contact').className = '';
+
+                } else if(nav_name == 'work') {
+
+                                document.getElementById('div_home').style.display = 'none';
+
+                                document.getElementById('div_work').style.display = 'block';
+
+                                document.getElementById('div_contact').style.display = 'none';
+
+                                document.getElementById('link_home').className = '';
+
+                                document.getElementById('link_work').className = 'active';
+
+                                document.getElementById('link_contact').className = '';
+
+                } else if(nav_name == 'contact') {
+
+                                document.getElementById('div_home').style.display = 'none';
+
+                                document.getElementById('div_work').style.display = 'none';
+
+                                document.getElementById('div_contact').style.display = 'block';
+
+                                document.getElementById('link_home').className = '';
+
+                                document.getElementById('link_work').className = '';
+
+                                document.getElementById('link_contact').className = 'active';
+
+                }
+
+}
+
+</script>
+
+</html>
